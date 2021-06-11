@@ -8,7 +8,7 @@ pip[3] install PyUploads
 ```
 
 ## Example Usage
-```bash
+```python
 import PyUploads
 
 try:
