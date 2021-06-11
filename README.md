@@ -13,11 +13,20 @@ import PyUploads
 
 try:
     print(
+        PyUploads.Hastebin.Create(
+            'Paste content'
+        )
+    )
+except PyUploads.Exceptions.CreationError:
+    print('Failed to Upload')
+
+try:
+    print(
         PyUploads.Throwbin.Create(
             'Paste Title', 
             'Paste Content'
         )
     )
-except PyUploads.CreationError:
+except PyUploads.Exceptions.CreationError:
     print('Failed to Upload')
 ```
