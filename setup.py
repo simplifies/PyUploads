@@ -1,5 +1,7 @@
 from setuptools import setup, find_packages
-# This code is horrible, please don't check it out until I feel like fixing it
+# I'll fix later
+# python setup.py bdist_wheel --universal
+# twine upload dist/*
 
 longdesc = '''
 # PyUploads
@@ -26,7 +28,7 @@ except PyUploads.CreationError:
     print('Failed to Upload')
 ```'''
 
-VERSION = '0.0.4' 
+VERSION = '0.0.5' 
 
 # Setting up
 setup(
