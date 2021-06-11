@@ -1,7 +1,6 @@
 import requests
+from .Exceptions import CreationError
 
-class CreationError(Exception):
-    pass
 
 
 # I will use seperate files for each later
@@ -18,7 +17,7 @@ class Throwbin():
         try:
             return(f'throwbin.io/{r.json()["id"]}')
         except: 
-            raise CreationError('Failed to create throwbin item: {e}'.format(e=r.text))
+            raise(CreationError(f'Failed to create throwbin item: {r.text}'))
  
 class Hastebin():
     def Create(file_content):
@@ -29,4 +28,4 @@ class Hastebin():
         try:
             return(f'https://hastebin.com/{r.json()["key"]}')
         except:
-            raise(CreationError('Failed to create Hastebin item {e}'.format(e=r.text)))
+            raise(CreationError(f'Failed to create Hastebin item {r.text}'))
