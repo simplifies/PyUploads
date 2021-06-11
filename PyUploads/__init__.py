@@ -1,8 +1,6 @@
 import requests
 from .Exceptions import CreationError
 
-
-
 # I will use seperate files for each later
 class Throwbin():
     def Create(title, file_content):
